@@ -1,0 +1,58 @@
+@import url("../shared/styles.css");
+
+.contact-card {
+  padding: 34px;
+  text-align: center;
+}
+
+.contact-link {
+  color: var(--indigo);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.faq-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  overflow: hidden;
+}
+
+.faq-button {
+  width: 100%;
+  min-height: 72px;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  color: var(--ink);
+  background: white;
+  font-weight: 850;
+  text-align: left;
+}
+
+.faq-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--indigo);
+  background: #eef2ff;
+  flex: 0 0 auto;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 26px 24px;
+  color: var(--muted);
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}

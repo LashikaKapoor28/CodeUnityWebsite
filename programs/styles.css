@@ -1,0 +1,35 @@
+@import url("../shared/styles.css");
+
+.program-card {
+  overflow: hidden;
+}
+
+.program-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.program-body {
+  padding: 34px;
+}
+
+.check-list {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #475569;
+}
+
+.check-list li::before {
+  content: "+";
+  margin-right: 8px;
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+.feature-strip {
+  max-width: 920px;
+}

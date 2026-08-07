@@ -1,0 +1,83 @@
+@import url("../shared/styles.css");
+
+.event-panel {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.event-header {
+  padding: 44px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(90deg, var(--indigo), var(--teal-dark));
+}
+
+.event-header .eyebrow {
+  color: #c7d2fe;
+}
+
+.event-copy {
+  padding: 42px;
+  text-align: center;
+}
+
+.winner-wrap {
+  padding: 0 42px 48px;
+}
+
+.winner-card {
+  padding: 32px;
+  text-align: center;
+  border-width: 2px;
+}
+
+.winner-medal {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.winner-place {
+  margin-bottom: 8px;
+  font-size: 0.84rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.winner-card.gold {
+  background: #fffbeb;
+  border-color: #fcd34d;
+}
+
+.winner-card.silver {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.winner-card.bronze {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.winner-card.gold .winner-place {
+  color: #b45309;
+}
+
+.winner-card.silver .winner-place {
+  color: #64748b;
+}
+
+.winner-card.bronze .winner-place {
+  color: #c2410c;
+}
+
+@media (max-width: 640px) {
+  .event-header,
+  .event-copy,
+  .winner-wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

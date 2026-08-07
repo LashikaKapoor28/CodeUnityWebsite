@@ -1,0 +1,48 @@
+@import url("../shared/styles.css");
+
+.person-card {
+  padding: 32px;
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-dark);
+  background: linear-gradient(135deg, #ccfbf1, #e0e7ff);
+  font-size: 1.3rem;
+  font-weight: 850;
+}
+
+.role {
+  margin-top: 8px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.location {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.team-block {
+  padding: 32px;
+  border-top: 5px solid #e0e7ff;
+}
+
+.member-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.member {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+}
