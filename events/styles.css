@@ -1,5 +1,10 @@
 @import url("../shared/styles.css");
 
+.event-list {
+  display: grid;
+  gap: 32px;
+}
+
 .event-panel {
   width: min(900px, 100%);
   margin: 0 auto;
