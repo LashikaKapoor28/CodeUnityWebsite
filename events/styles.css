@@ -1,5 +1,10 @@
 @import url("../shared/styles.css");
 
+.event-list {
+  display: grid;
+  gap: 32px;
+}
+
 .event-panel {
   width: min(900px, 100%);
   margin: 0 auto;
@@ -7,14 +12,46 @@
 }
 
 .event-header {
+  width: 100%;
+  border: 0;
   padding: 44px;
   color: white;
+  cursor: pointer;
+  font: inherit;
   text-align: center;
   background: linear-gradient(90deg, var(--indigo), var(--teal-dark));
 }
 
 .event-header .eyebrow {
+  display: block;
   color: #c7d2fe;
+}
+
+.event-title {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.event-toggle:focus-visible {
+  outline: 3px solid #fcd34d;
+  outline-offset: -5px;
+}
+
+.event-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+
+.event-content-inner {
+  overflow: hidden;
+}
+
+.event-panel.open .event-content {
+  grid-template-rows: 1fr;
 }
 
 .event-copy {
@@ -79,5 +116,11 @@
   .winner-wrap {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-content {
+    transition: none;
   }
 }
