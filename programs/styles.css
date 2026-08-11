@@ -2,6 +2,9 @@
 
 .program-card {
   overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .program-card img {
@@ -12,6 +15,14 @@
 
 .program-body {
   padding: 34px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-body .check-list {
+  margin-top: auto;
+  padding-top: 24px;
 }
 
 .check-list {
@@ -32,4 +43,23 @@
 
 .feature-strip {
   max-width: 920px;
+}
+
+.feature-card {
+  min-height: 100%;
+  text-align: left;
+}
+
+.feature-card p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.feature-number {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--indigo);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
 }
