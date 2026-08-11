@@ -1,6 +1,40 @@
 @import url("../shared/styles.css");
 
+.contact-overview-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-overview-card .lead {
+  margin-top: 16px;
+}
+
+.contact-overview-card .action-row,
+.contact-overview-card .text-link {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.primary-contact {
+  border-color: #c7d2fe;
+  background:
+    radial-gradient(circle at 100% 0%, rgb(224 231 255 / 0.8), transparent 42%),
+    white;
+}
+
+.text-link {
+  width: fit-content;
+  color: var(--indigo);
+  font-weight: 800;
+}
+
+.text-link:hover {
+  color: var(--indigo-dark);
+}
+
 .contact-card {
+  min-height: 100%;
   padding: 34px;
   text-align: center;
 }
@@ -33,6 +67,7 @@
   background: white;
   font-weight: 850;
   text-align: left;
+  cursor: pointer;
 }
 
 .faq-icon {
@@ -47,6 +82,16 @@
   flex: 0 0 auto;
 }
 
+.faq-icon svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 180ms ease;
+}
+
+.faq-item.open .faq-icon svg {
+  transform: rotate(180deg);
+}
+
 .faq-answer {
   display: none;
   padding: 0 26px 24px;
@@ -55,4 +100,14 @@
 
 .faq-item.open .faq-answer {
   display: block;
+}
+
+@media (max-width: 560px) {
+  .faq-button {
+    padding: 20px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px;
+  }
 }

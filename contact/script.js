@@ -3,6 +3,5 @@ document.querySelectorAll(".faq-button").forEach((button) => {
     const item = button.closest(".faq-item");
     const isOpen = item.classList.toggle("open");
     button.setAttribute("aria-expanded", String(isOpen));
-    button.querySelector(".faq-icon").textContent = isOpen ? "-" : "+";
   });
 });

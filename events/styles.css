@@ -2,24 +2,34 @@
 
 .event-list {
   display: grid;
-  gap: 32px;
+  gap: 24px;
 }
 
 .event-panel {
-  width: min(900px, 100%);
+  width: min(960px, 100%);
   margin: 0 auto;
   overflow: hidden;
 }
 
 .event-header {
+  position: relative;
   width: 100%;
   border: 0;
-  padding: 44px;
+  padding: 36px 72px;
   color: white;
   cursor: pointer;
   font: inherit;
   text-align: center;
   background: linear-gradient(90deg, var(--indigo), var(--teal-dark));
+  transition: filter 160ms ease;
+}
+
+.event-header:hover {
+  filter: brightness(1.05);
+}
+
+.event-header:active {
+  filter: brightness(0.98);
 }
 
 .event-header .eyebrow {
@@ -30,9 +40,33 @@
 .event-title {
   display: block;
   margin-top: 8px;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
   font-weight: 800;
   line-height: 1.2;
+}
+
+.event-chevron {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255 255 255 / 0.14);
+  transform: translateY(-50%);
+}
+
+.event-chevron svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 180ms ease;
+}
+
+.event-panel.open .event-chevron svg {
+  transform: rotate(180deg);
 }
 
 .event-toggle:focus-visible {
@@ -55,24 +89,18 @@
 }
 
 .event-copy {
-  padding: 42px;
+  padding: 36px;
   text-align: center;
 }
 
 .winner-wrap {
-  padding: 0 42px 48px;
+  padding: 0 36px 40px;
 }
 
 .winner-card {
-  padding: 32px;
+  padding: 28px;
   text-align: center;
   border-width: 2px;
-}
-
-.winner-medal {
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 18px;
 }
 
 .winner-place {
@@ -116,6 +144,21 @@
   .winner-wrap {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .event-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .event-title {
+    font-size: 1.55rem;
+  }
+
+  .event-chevron {
+    right: 18px;
+    width: 30px;
+    height: 30px;
   }
 }
 

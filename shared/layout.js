@@ -5,26 +5,34 @@ const bottomShell = document.getElementById("site-shell-bottom");
 const pages = [
   ["home", "Home", `${depth}home/index.html`],
   ["programs", "Programs", `${depth}programs/index.html`],
+  ["project-samples", "Projects", `${depth}project-samples/index.html`],
+  ["events", "Events", `${depth}events/index.html`],
   ["team", "Team", `${depth}team/index.html`],
   ["contact", "Contact", `${depth}contact/index.html`],
-  ["project-samples", "Project Samples", `${depth}project-samples/index.html`],
-  ["events", "Events", `${depth}events/index.html`],
 ];
+
+const brandMark = `
+  <span class="brand-mark" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="m9 6-6 6 6 6M15 6l6 6-6 6M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+`;
 
 if (topShell) {
   topShell.innerHTML = `
     <nav class="site-nav" data-site-nav>
       <div class="nav-inner">
         <a class="brand" href="${depth}index.html" aria-label="CodeUnity home">
-          <span class="brand-mark">&lt;/&gt;</span>
+          ${brandMark}
           <span>CodeUnity</span>
         </a>
         <div class="nav-links" data-menu>
           ${pages.map(([id, label, href]) => `<a href="${href}" data-page-link="${id}">${label}</a>`).join("")}
+          <a class="button primary nav-mobile-cta" href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Enroll Now</a>
         </div>
         <div class="nav-actions">
-          <a class="button ghost" href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Enroll Now</a>
-          <a class="button primary" href="https://forms.gle/NMccEcTzwVXDVzf1A" target="_blank" rel="noreferrer">Contact Us</a>
+          <a class="button primary" href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Enroll Now</a>
         </div>
         <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation menu"></button>
       </div>
@@ -39,7 +47,7 @@ if (bottomShell) {
         <div class="footer-grid">
           <section>
             <a class="footer-brand" href="${depth}index.html">
-              <span class="brand-mark">&lt;/&gt;</span>
+              ${brandMark}
               <span>CodeUnity</span>
             </a>
             <p>Code Together. Grow Together. Breaking barriers in tech education across Massachusetts, Minnesota, Rhode Island, New Jersey, and Florida.</p>
@@ -56,9 +64,9 @@ if (bottomShell) {
             <ul>
               <li><a href="${depth}programs/index.html">C.O.R.E Program</a></li>
               <li><a href="${depth}programs/index.html">TurtleLab Program</a></li>
-              <li><a href="${depth}team/index.html">Our Team</a></li>
+              <li><a href="${depth}project-samples/index.html">Student Projects</a></li>
+              <li><a href="${depth}events/index.html">Events</a></li>
               <li><a href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Student Enrollment</a></li>
-              <li><a href="https://forms.gle/i4YVVrik8Y7SeXNp6" target="_blank" rel="noreferrer">Join as Mentor</a></li>
             </ul>
           </section>
           <section>
@@ -142,6 +150,13 @@ document.addEventListener("click", (event) => {
   const link = event.target.closest("[data-page-link]");
   if (link && menu?.classList.contains("open")) {
     closeMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menu?.classList.contains("open")) {
+    closeMenu();
+    menuButton?.focus();
   }
 });
 

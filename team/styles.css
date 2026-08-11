@@ -1,6 +1,7 @@
 @import url("../shared/styles.css");
 
 .person-card {
+  min-height: 100%;
   padding: 32px;
   text-align: center;
 }
@@ -32,7 +33,7 @@
 
 .team-block {
   padding: 32px;
-  border-top: 5px solid #e0e7ff;
+  border-top: 4px solid #c7d2fe;
 }
 
 .member-list {
@@ -45,4 +46,43 @@
   padding: 16px;
   border-radius: 14px;
   background: #f8fafc;
+}
+
+.member strong {
+  display: block;
+}
+
+.member p {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.join-panel {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  padding: 48px;
+  background:
+    radial-gradient(circle at 10% 0%, rgb(224 231 255 / 0.8), transparent 38%),
+    radial-gradient(circle at 90% 100%, rgb(204 251 241 / 0.7), transparent 36%),
+    white;
+}
+
+.join-panel .lead {
+  max-width: 660px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.join-panel .action-row {
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .hero-page h1 {
+    font-size: 2.35rem;
+  }
+
+  .join-panel {
+    padding: 32px 24px;
+  }
 }

@@ -1,17 +1,17 @@
 @import url("../shared/styles.css");
 
 .home-hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
   display: grid;
   align-items: center;
-  padding: 44px 0 56px;
+  padding: 48px 0 64px;
   overflow: hidden;
 }
 
 .home-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1fr);
-  gap: 72px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(500px, 1.08fr);
+  gap: 64px;
   align-items: center;
 }
 
@@ -22,14 +22,14 @@
 .home-title {
   max-width: 560px;
   color: #0f172a;
-  font-size: clamp(4.25rem, 7vw, 5.35rem);
+  font-size: var(--home-title-size);
   line-height: 0.98;
   font-weight: 900;
 }
 
 .home-tagline {
   margin-top: 8px;
-  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
   line-height: 1.2;
   font-weight: 700;
   background: linear-gradient(90deg, #4f46e5, #0ea5e9, #0f766e);
@@ -40,7 +40,7 @@
 
 .home-intro {
   max-width: 590px;
-  margin-top: 30px;
+  margin-top: 24px;
   color: #334155;
   font-size: clamp(1.08rem, 1.65vw, 1.3rem);
   line-height: 1.65;
@@ -50,7 +50,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 42px;
+  margin-top: 32px;
 }
 
 .hero-button {
@@ -72,8 +72,8 @@
 .state-row {
   display: flex;
   align-items: center;
-  gap: 34px;
-  margin-top: 52px;
+  gap: 24px;
+  margin-top: 40px;
 }
 
 .state-row p {
@@ -87,8 +87,8 @@
 }
 
 .state-bubbles span {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   margin-left: -8px;
   border-radius: 999px;
   border: 2px solid white;
@@ -107,13 +107,13 @@
 
 .hero-visual {
   position: relative;
-  min-height: 535px;
+  min-height: 500px;
 }
 
 .hero-photo {
   position: relative;
   z-index: 1;
-  min-height: 500px;
+  min-height: 460px;
 }
 
 .hero-photo::before {
@@ -129,7 +129,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 500px;
+  height: 460px;
   object-fit: cover;
   border-radius: 22px;
   box-shadow: 0 28px 70px rgb(15 23 42 / 0.16);
@@ -185,6 +185,11 @@
   font-weight: 900;
 }
 
+.floating-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 .floating-icon.mint {
   background: #ccfbf1;
 }
@@ -192,7 +197,7 @@
 .split {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 56px;
+  gap: 64px;
   align-items: center;
 }
 
@@ -214,7 +219,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 440px;
+  height: 400px;
   object-fit: cover;
   border-radius: 24px;
   box-shadow: var(--shadow);
@@ -222,6 +227,9 @@
 
 .program-card {
   overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .program-card img {
@@ -232,6 +240,7 @@
 
 .program-body {
   padding: 32px;
+  flex: 1;
 }
 
 .check-list {
@@ -251,7 +260,7 @@
 }
 
 .impact-band {
-  padding: 112px 0 104px;
+  padding: 88px 0;
   color: white;
   background:
     radial-gradient(circle at 28% 12%, rgb(67 56 202 / 0.55), transparent 30%),
@@ -304,8 +313,11 @@
   justify-content: center;
   color: white;
   background: linear-gradient(135deg, #2dd4bf, #60a5fa);
-  font-size: 1.6rem;
-  font-weight: 900;
+}
+
+.reach-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .reach-card strong {
@@ -399,7 +411,16 @@
   }
 
   .home-title {
-    font-size: clamp(3.3rem, 18vw, 4.25rem);
+    max-width: 100%;
+    font-size: clamp(3rem, 14vw, 3.4rem);
+  }
+
+  .home-tagline {
+    font-size: 1.55rem;
+  }
+
+  .hero-actions .button {
+    width: 100%;
   }
 
   .state-row,
@@ -425,7 +446,7 @@
   }
 
   .hero-photo img {
-    height: 360px;
+    height: 320px;
   }
 
   .reach-grid {
