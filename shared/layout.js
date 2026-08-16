@@ -7,6 +7,7 @@ const pages = [
   ["programs", "Programs", `${depth}programs/index.html`],
   ["project-samples", "Projects", `${depth}project-samples/index.html`],
   ["events", "Events", `${depth}events/index.html`],
+  ["sponsors", "Sponsors", `${depth}sponsors/index.html`],
   ["team", "Team", `${depth}team/index.html`],
   ["contact", "Contact", `${depth}contact/index.html`],
 ];
@@ -62,6 +63,7 @@ if (bottomShell) {
               <li><a href="${depth}programs/index.html">TurtleLab Program</a></li>
               <li><a href="${depth}project-samples/index.html">Student Projects</a></li>
               <li><a href="${depth}events/index.html">Events</a></li>
+              <li><a href="${depth}sponsors/index.html">Sponsors</a></li>
               <li><a href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Student Enrollment</a></li>
             </ul>
           </section>
