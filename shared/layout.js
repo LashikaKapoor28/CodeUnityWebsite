@@ -12,11 +12,7 @@ const pages = [
 ];
 
 const brandMark = `
-  <span class="brand-mark" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="m9 6-6 6 6 6M15 6l6 6-6 6M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span>
+  <img class="brand-logo" src="${depth}shared/logo-transparent.png" alt="" aria-hidden="true">
 `;
 
 if (topShell) {

@@ -115,21 +115,18 @@ input {
   color: var(--ink);
 }
 
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(135deg, var(--indigo), var(--teal));
-  box-shadow: 0 8px 18px rgb(79 70 229 / 0.2);
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
-.brand-mark svg {
-  width: 24px;
-  height: 24px;
+.footer-brand .brand-logo {
+  padding: 2px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.96);
 }
 
 .nav-links,
