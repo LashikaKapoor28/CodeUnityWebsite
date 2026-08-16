@@ -1,0 +1,70 @@
+@import url("../shared/styles.css");
+
+.sponsor-card {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+}
+
+.sponsor-logo-panel {
+  min-height: 360px;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-right: 1px solid var(--line);
+}
+
+.sponsor-logo-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.sponsor-content {
+  padding: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sponsor-content h2 {
+  margin-top: 14px;
+}
+
+.sponsor-abbreviation {
+  margin-top: 8px;
+  color: var(--indigo);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.sponsor-content .lead {
+  margin-top: 20px;
+}
+
+.sponsor-content .action-row {
+  margin-top: 28px;
+}
+
+@media (max-width: 760px) {
+  .sponsor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-logo-panel {
+    min-height: 200px;
+    padding: 36px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sponsor-content {
+    padding: 34px 28px;
+  }
+}

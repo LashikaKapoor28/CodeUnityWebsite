@@ -7,16 +7,13 @@ const pages = [
   ["programs", "Programs", `${depth}programs/index.html`],
   ["project-samples", "Projects", `${depth}project-samples/index.html`],
   ["events", "Events", `${depth}events/index.html`],
+  ["sponsors", "Sponsors", `${depth}sponsors/index.html`],
   ["team", "Team", `${depth}team/index.html`],
   ["contact", "Contact", `${depth}contact/index.html`],
 ];
 
 const brandMark = `
-  <span class="brand-mark" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="m9 6-6 6 6 6M15 6l6 6-6 6M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span>
+  <img class="brand-logo" src="${depth}shared/logo-transparent.png" alt="" aria-hidden="true">
 `;
 
 if (topShell) {
@@ -66,6 +63,7 @@ if (bottomShell) {
               <li><a href="${depth}programs/index.html">TurtleLab Program</a></li>
               <li><a href="${depth}project-samples/index.html">Student Projects</a></li>
               <li><a href="${depth}events/index.html">Events</a></li>
+              <li><a href="${depth}sponsors/index.html">Sponsors</a></li>
               <li><a href="https://forms.gle/LGbbzjfVSJiERgML7" target="_blank" rel="noreferrer">Student Enrollment</a></li>
             </ul>
           </section>
