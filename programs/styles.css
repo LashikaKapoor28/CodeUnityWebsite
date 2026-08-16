@@ -9,29 +9,40 @@
 
 .program-card img {
   width: 100%;
-  height: 260px;
+  height: 180px;
   object-fit: cover;
 }
 
 .program-body {
-  padding: 34px;
+  padding: 26px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+.program-body h2 {
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+}
+
+.program-description {
+  margin: 0;
+  color: #475569;
+  line-height: 1.65;
+}
+
 .program-body .check-list {
   margin-top: auto;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 .check-list {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   margin: 20px 0 0;
   padding: 0;
   list-style: none;
   color: #475569;
+  font-size: .95rem;
 }
 
 .check-list li::before {
@@ -39,6 +50,37 @@
   margin-right: 8px;
   color: var(--teal-dark);
   font-weight: 900;
+}
+
+.pill.stack {
+  color: #9a3412;
+  background: #ffedd5;
+}
+
+.pill.future {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.program-placeholder {
+  border-style: dashed;
+}
+
+.program-placeholder-visual {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(124, 58, 237, .18), transparent 34%),
+    radial-gradient(circle at 80% 72%, rgba(20, 184, 166, .2), transparent 36%),
+    #f8fafc;
+}
+
+.program-placeholder-visual span {
+  color: rgba(79, 70, 229, .25);
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -.08em;
 }
 
 .feature-strip {
