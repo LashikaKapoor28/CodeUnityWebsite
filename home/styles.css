@@ -296,16 +296,17 @@
   background: linear-gradient(145deg, #f8fafc, #eef2ff);
 }
 
-.testimonial-placeholder .testimonial-mark {
-  color: #94a3b8;
+.testimonial-placeholder-logo {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.38;
 }
 
 .testimonial-placeholder h3 {
-  margin: 24px 0 10px;
-}
-
-.testimonial-placeholder p {
-  color: var(--muted);
+  margin: 24px 0 0;
 }
 
 .program-grid {
