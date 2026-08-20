@@ -227,9 +227,12 @@
 
 .testimonial-grid {
   align-items: stretch;
+  margin-bottom: 4rem; /* Adds clean spacing above the purple banner */
 }
 
+/* Remove the margin from the cards since the grid handles it now */
 .testimonial-card {
+  /* remove margin-top: 2rem; */
   min-height: 360px;
   padding: 34px;
   display: flex;
@@ -340,12 +343,26 @@
   font-weight: 900;
 }
 
+/* 1. Force the section to break out of parent constraints to full width */
 .impact-band {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
   padding: 88px 0;
   color: white;
-  background:
+  background: 
     radial-gradient(circle at 28% 12%, rgb(67 56 202 / 0.55), transparent 30%),
     linear-gradient(135deg, #37308f 0%, #2f2c90 52%, #111827 100%);
+}
+
+/* 2. Remove standard section padding/margins if inherited from .section */
+.section.impact-band {
+  border-radius: 0;
+  max-width: none;
 }
 
 .impact-band .eyebrow {
