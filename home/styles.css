@@ -225,6 +225,25 @@
   box-shadow: var(--shadow);
 }
 
+.hero-photo.image-rotator {
+  height: 460px;
+}
+
+.feature-photo.image-rotator {
+  height: 400px;
+}
+
+.image-rotator > img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.image-rotator > img.is-active {
+  opacity: 1;
+}
+
 .testimonial-grid {
   align-items: stretch;
   margin-bottom: 0;
@@ -568,7 +587,17 @@
     height: 320px;
   }
 
+  .hero-photo.image-rotator {
+    height: 320px;
+  }
+
   .reach-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-rotator > img {
+    transition: none;
   }
 }

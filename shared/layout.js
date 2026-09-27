@@ -50,7 +50,7 @@ if (bottomShell) {
             </a>
             <p>Code Together. Grow Together. Breaking barriers in tech education across Massachusetts, Minnesota, Rhode Island, New Jersey, and Florida.</p>
             <div class="footer-social" aria-label="Social links">
-              <a href="#" aria-label="Instagram">IG</a>
+              <a href="https://www.instagram.com/codeunity_official/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
               <a href="#" aria-label="LinkedIn">in</a>
               <a href="#" aria-label="YouTube">YT</a>
               <a href="#" aria-label="Facebook">f</a>
@@ -91,7 +91,7 @@ if (bottomShell) {
           </section>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 CodeUnity. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+          <p>&copy; 2026 CodeUnity. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
           <div class="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
