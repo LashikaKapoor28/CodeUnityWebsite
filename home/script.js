@@ -1,6 +1,28 @@
 const testimonialGrid = document.querySelector("[data-home-testimonials]");
 const testimonialTools = window.CodeUnityTestimonials;
 const featuredStories = testimonialTools?.stories.slice(0, 3) || [];
+const rotationImages = [
+  "../content/image/Who_we_are.jpg",
+  "../content/image/IMG_6745%20-%20Megha%20Thakkar%20(2).jpeg",
+  "../content/image/20260825_102226%20-%20Aishwarya%20Ramakrishnan%20(1).jpg"
+];
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("[data-image-rotator]").forEach((rotator) => {
+    const layers = Array.from(rotator.querySelectorAll("img"));
+    let activeLayer = 0;
+    let currentIndex = Number(rotator.dataset.startIndex) || 0;
+
+    window.setInterval(() => {
+      const incomingLayer = activeLayer === 0 ? 1 : 0;
+      currentIndex = (currentIndex + 1) % rotationImages.length;
+      layers[incomingLayer].src = rotationImages[currentIndex];
+      layers[incomingLayer].classList.add("is-active");
+      layers[activeLayer].classList.remove("is-active");
+      activeLayer = incomingLayer;
+    }, 10000);
+  });
+}
 
 function createHomeTestimonial(story) {
   const card = document.createElement("section");
