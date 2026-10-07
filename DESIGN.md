@@ -87,7 +87,7 @@ Below 560px, the home title caps at `3.4rem`, interior page titles at `2.5rem`, 
 ### Card
 
 - **Structure:** White surface with a subtle border, `--radius-card` 20px radius, and `--shadow-card` soft shadow.
-- **Variants:** Padded, program, person, team, contact, project, event, winner, reach, quote, and subscribe.
+- **Variants:** Padded, program, person, team, contact, project, event, winner, reach, and quote.
 - **States:** Static by default; project cards elevate on hover; event and FAQ cards have open/closed states.
 - **Accessibility:** Interactive content uses links or buttons rather than clickable containers.
 
