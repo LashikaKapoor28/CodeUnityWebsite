@@ -48,7 +48,7 @@ if (bottomShell) {
               ${brandMark}
               <span>CodeUnity</span>
             </a>
-            <p>Code Together. Grow Together. Breaking barriers in tech education across Massachusetts, Minnesota, Rhode Island, New Jersey, and Florida.</p>
+            <p>Code Together. Grow Together. Breaking barriers in tech education across Alaska, Florida, Massachusetts, Minnesota, New Jersey, Ohio, and Wisconsin.</p>
             <div class="footer-social" aria-label="Social links">
               <a href="https://www.instagram.com/codeunity_official/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
               <a href="#" aria-label="LinkedIn">in</a>
@@ -72,11 +72,13 @@ if (bottomShell) {
           <section>
             <h2>Where We Are</h2>
             <ul class="dot-list">
+              <li>Alaska</li>
+              <li>Florida</li>
               <li>Massachusetts</li>
               <li>Minnesota</li>
-              <li>Rhode Island</li>
               <li>New Jersey</li>
-              <li>Florida</li>
+              <li>Ohio</li>
+              <li>Wisconsin</li>
             </ul>
             <p class="mt-4"><em>...and expanding!</em></p>
           </section>
